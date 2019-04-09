@@ -1,0 +1,51 @@
+<html>
+<head>
+  <script>
+  //function to create a addition table
+function additionTable() {
+  var tableWin = window.open("", "mathTables", "toolbar=no,menubar=no,location=no,scrollbars=yes,resizble=no,width=500,height=400");
+  tableWin.document.open();
+  tableWin.document.write("<h1>Addition Table</h1>");
+  tableWin.document.write("<table border='1' width='100%'>");
+  tableWin.document.write("<tr><th>&nbsp;</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th></tr>");
+  for (var i = 0; i < 11; ++i) {
+    tableWin.document.write("<tr align='center'><td>" + i + "</td>");
+    for (var k = 0; k < 11; ++k) {
+      var curNum = i + k;
+      tableWin.document.write("<td>" + curNum + "</td>");
+    }
+    tableWin.document.write("</tr>");
+  }
+  tableWin.document.write("</table>");
+  tableWin.document.close();
+  tableWin.focus();
+}
+//function to create the multiplication table.
+function multiplicationTable() {
+  var tableWin = window.open("", "mathTables", "toolbar=no,menubar=no,location=no,scrollbars=yes,resizble=no,width=475,height=400");
+  tableWin.document.open();
+  tableWin.document.write("<h1>Multiplication Table</h1>");
+  tableWin.document.write("<table border='1' width='100%'>");
+  tableWin.document.write("<tr><th>&nbsp;</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th></tr>");
+  for (var i = 0; i < 11; ++i) {
+    tableWin.document.write("<tr align='center'><td>" + i + "</td>");
+    for (var k = 0; k < 11; ++k) {
+      var curNum = i * k;
+      tableWin.document.write("<td>" + curNum + "</td>");
+    }
+    tableWin.document.write("</tr>");
+  }
+  tableWin.document.write("</table>");
+  tableWin.document.close();
+  tableWin.focus();
+}
+</script>
+<title>Math Tables</title>
+</head>
+<body>
+  <h1>Math Tables</h1>
+  
+  <input type="button" value="Addition Table" onclick="additionTable()" /><br />
+  <input type="button" value="Multiplication Table" onclick="multiplicationTable()" />
+</body>
+</html>
